@@ -1,0 +1,33 @@
+{
+    "name": "ts-lib-template",
+    "version": "0.1.0",
+    "description": "",
+    "exports": "./lib/lib.js",
+    "types": "./lib/lib.d.ts",
+    "files": [
+        "lib"
+    ],
+    "engines": {
+        "node": ">=16"
+    },
+    "type": "module",
+    "keywords": [
+        "typescript"
+    ],
+    "author": "CharlieHsieh <oe327188@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "scripts": {
+        "example": "npm run build && node ./lib/lib.js",
+        "clean": "rm -rf lib",
+        "build": "npm run clean && tsc -p tsconfig.build.json",
+        "build:watch": "npm run build -- -w",
+        "prepack": "npm run build"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.5"
+    },
+    "dependencies": {
+        "@types/node": "^20.12.10"
+    }
+}
